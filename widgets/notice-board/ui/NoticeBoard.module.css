@@ -1,0 +1,515 @@
+.container {
+  --ink: #000000;
+  --muted: #1a1a1a;
+  --line: rgba(0, 0, 0, 0.08);
+  --card: #ffffff;
+  --bg-1: #f6f3ff;
+  --bg-2: #e8f6ff;
+  --accent: #2f6bff;
+  --accent-2: #ff6b35;
+  --accent-3: #20b486;
+  --shadow: 0 16px 40px rgba(16, 22, 26, 0.12);
+
+  min-height: 100svh;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #ffe6c7 0%, rgba(255, 230, 199, 0) 55%),
+    radial-gradient(900px 500px at 90% 0%, #d8f1ff 0%, rgba(216, 241, 255, 0) 60%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  color: var(--ink);
+  padding: 28px 20px 120px;
+  font-family: "Gmarket Sans", "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.header h1 {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  margin: 0 0 4px 0;
+}
+
+.header p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.headerBadge {
+  min-width: 60px;
+  height: 60px;
+  background: #111;
+  color: #fff;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: var(--shadow);
+}
+
+.main {
+  display: grid;
+  gap: 18px;
+}
+
+.ddayBanner {
+  position: relative;
+  border-radius: 20px;
+  padding: 22px 22px 24px;
+  color: #fff;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.ddayBanner::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  filter: blur(2px);
+}
+
+.ddayExam {
+  background: linear-gradient(135deg, #ff7a4d, #ff3d64);
+}
+
+.ddayTask {
+  background: linear-gradient(135deg, #20b486, #22c7dd);
+}
+
+.ddayNotice {
+  background: linear-gradient(135deg, #2f6bff, #7b5dff);
+}
+
+.ddayLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+}
+
+.ddayTitle {
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.ddayCount {
+  font-size: 34px;
+  font-weight: 900;
+  margin-top: 6px;
+}
+
+.ddayDate {
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+.emptyBanner {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px dashed var(--line);
+  padding: 22px;
+  text-align: center;
+}
+
+.listSection {
+  margin-top: 8px;
+}
+
+.listSection h3 {
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.count {
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.cardPast {
+  opacity: 0.6;
+}
+
+.infoGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.typeExam {
+  background: #ff3d64;
+}
+
+.typeTask {
+  background: #20b486;
+}
+
+.typeNotice {
+  background: #2f6bff;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.date {
+  margin: 2px 0 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dDayText {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.dDayToday {
+  color: var(--accent-2);
+}
+
+.dDayPast {
+  color: #8b8b8b;
+}
+
+.deleteBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn:hover {
+  background: #fff3f3;
+  border-color: #ffc9c9;
+}
+
+.trashIcon {
+  width: 16px;
+  height: 16px;
+  fill: #111;
+}
+
+.editBtn {
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.editBtn:hover {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+.fab {
+  position: fixed;
+  right: 18px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 50;
+  animation: fadeIn 0.25s ease;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 20px 18px 18px;
+  box-shadow: var(--shadow);
+  animation: popIn 0.25s ease;
+}
+
+.modalClosing {
+  animation: popOut 0.28s ease forwards;
+}
+
+.modalHandle {
+  width: 52px;
+  height: 6px;
+  background: #e6e6e6;
+  border-radius: 999px;
+  margin: 0 auto 14px;
+}
+
+.inputGroup {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.inputGroup label {
+  font-weight: 700;
+}
+
+.inputGroup input {
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 0 12px;
+  font-size: 14px;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+.categoryGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.catBtn {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.catBtnActive {
+  color: #000;
+  border-color: transparent;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.errorMsg {
+  color: #e11d48;
+  font-weight: 700;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 46px;
+  border-radius: 12px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.closeBtn {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.calendar {
+  background: #f8f9ff;
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid var(--line);
+}
+
+.calHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.calNav {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.calTitle {
+  font-weight: 800;
+}
+
+.calWeekdays,
+.calGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calWeekday {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.calDay {
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.calDaySelected {
+  background: #111;
+  color: #fff;
+}
+
+.calDayToday {
+  border-color: #111;
+}
+
+.calSelected {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.sun {
+  color: #e11d48;
+}
+
+.sat {
+  color: #2563eb;
+}
+
+.skeletonBanner,
+.skeletonCard {
+  background: linear-gradient(110deg, #f0f0f0 8%, #f7f7f7 18%, #f0f0f0 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+  border-radius: 16px;
+  height: 120px;
+}
+
+.skeletonCard {
+  height: 72px;
+  margin-bottom: 10px;
+}
+
+.emptyState {
+  border-radius: 16px;
+  border: 1px dashed var(--line);
+  padding: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: translateY(10px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes popOut {
+  from { transform: translateY(0) scale(1); opacity: 1; }
+  to { transform: translateY(10px) scale(0.98); opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .header h1 { font-size: 24px; }
+  .headerBadge { min-width: 52px; height: 52px; }
+  .ddayCount { font-size: 28px; }
+  .card { padding: 12px; }
+  .fab { right: 14px; bottom: 18px; }
+}
